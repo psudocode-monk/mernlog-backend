@@ -17,8 +17,6 @@ app.use(express.json());
 
 app.use("/api", router);
 
-app.use("/", (req, res) => res.send("Server is running"));
-
 connectDB()
   .then(() => {
     app.listen(process.env.PORT, () => {
